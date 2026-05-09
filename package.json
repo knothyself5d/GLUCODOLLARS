@@ -1,0 +1,18 @@
+{
+  "name": "glucodollars",
+  "version": "1.0.0",
+  "description": "GlucoDollars - Sell your unused diabetic supplies for top dollar",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx http-server . -p 8000",
+    "deploy": "netlify deploy --prod"
+  },
+  "keywords": [
+    "medical supplies",
+    "diabetic supplies",
+    "resale",
+    "buyback"
+  ],
+  "author": "GlucoDollars",
+  "license": "MIT"
+}

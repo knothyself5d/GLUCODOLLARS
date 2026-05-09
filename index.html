@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GlucoDollars - Sell Your Unused Diabetic Supplies</title>
+    <meta name="description" content="Get top dollar for your unused diabetic supplies. Fast payouts, free shipping, trusted nationwide service.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-logo">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                    <circle cx="16" cy="16" r="15" fill="#0F7B73"/>
+                    <text x="16" y="22" font-size="18" font-weight="bold" fill="#F7F4ED" text-anchor="middle">G$</text>
+                </svg>
+                <span>GlucoDollars</span>
+            </div>
+            
+            <button class="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <ul class="navbar-menu">
+                <li><a href="#how-it-works">How It Works</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#why-us">Why Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            
+            <button class="cta-button" data-modal="quote-modal">Get Instant Quote</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1>Sell Your Unused Diabetic Supplies for Top Dollar</h1>
+                <p class="hero-subheading">Fast payouts, free shipping, and trusted service nationwide.</p>
+                
+                <div class="hero-buttons">
+                    <button class="btn btn-primary" data-modal="quote-modal">Get My Quote</button>
+                    <button class="btn btn-secondary" onclick="document.getElementById('pricing').scrollIntoView({behavior: 'smooth'})">Check My Supplies</button>
+                </div>
+                
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-value">50K+</span>
+                        <span class="stat-label">Sellers Paid</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-value">$2.5M+</span>
+                        <span class="stat-label">Total Paid Out</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-value">24hrs</span>
+                        <span class="stat-label">Avg Payment</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="hero-visual">
+                <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Medical supplies illustration -->
+                    <defs>
+                        <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#65D6A4;stop-opacity:0.1" />
+                            <stop offset="100%" style="stop-color:#0F7B73;stop-opacity:0.1" />
+                        </linearGradient>
+                    </defs>
+                    
+                    <circle cx="200" cy="200" r="180" fill="url(#bgGradient)"/>
+                    
+                    <!-- Glucose meter -->
+                    <rect x="80" y="120" width="80" height="120" rx="8" fill="#0F7B73" class="medical-item"/>
+                    <circle cx="120" cy="160" r="12" fill="#65D6A4"/>
+                    <text x="120" y="220" font-size="14" fill="#F7F4ED" text-anchor="middle" font-weight="600">Glucose Meter</text>
+                    
+                    <!-- Test strips box -->
+                    <rect x="240" y="140" width="70" height="100" rx="6" fill="#65D6A4" class="medical-item" style="animation-delay: 0.1s"/>
+                    <rect x="248" y="150" width="54" height="15" fill="#0F7B73" opacity="0.3"/>
+                    <rect x="248" y="175" width="54" height="15" fill="#0F7B73" opacity="0.3"/>
+                    <text x="275" y="275" font-size="12" fill="#0F7B73" text-anchor="middle" font-weight="600">Test Strips</text>
+                    
+                    <!-- Insulin pen -->
+                    <rect x="140" y="260" width="15" height="90" rx="7" fill="#0F7B73" class="medical-item" style="animation-delay: 0.2s"/>
+                    <circle cx="147" cy="250" r="8" fill="#65D6A4"/>
+                    <text x="147" y="370" font-size="12" fill="#0F7B73" text-anchor="middle" font-weight="600">Insulin</text>
+                    
+                    <!-- Dollar sign -->
+                    <circle cx="320" cy="240" r="35" fill="#65D6A4" class="floating-element"/>
+                    <text x="320" y="253" font-size="48" fill="#0F7B73" text-anchor="middle" font-weight="800">$</text>
+                </svg>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Strip -->
+    <section class="trust-strip">
+        <div class="trust-container">
+            <div class="trust-item">
+                <div class="trust-icon">✓</div>
+                <span>Licensed & Insured</span>
+            </div>
+            <div class="trust-item">
+                <div class="trust-icon">⚡</div>
+                <span>Fast Payment (24hrs)</span>
+            </div>
+            <div class="trust-item">
+                <div class="trust-icon">🚚</div>
+                <span>Free Shipping</span>
+            </div>
+            <div class="trust-item">
+                <div class="trust-icon">🔒</div>
+                <span>Secure & Confidential</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="how-it-works" id="how-it-works">
+        <div class="section-container">
+            <h2>How It Works</h2>
+            <p class="section-subtitle">Simple 4-step process to get paid for your supplies</p>
+            
+            <div class="steps-grid">
+                <div class="step-card fade-in">
+                    <div class="step-number">1</div>
+                    <h3>Submit Your Supplies</h3>
+                    <p>Tell us what diabetic supplies you have. Takes just 2 minutes.</p>
+                    <div class="step-icon">📋</div>
+                </div>
+                
+                <div class="step-connector"></div>
+                
+                <div class="step-card fade-in" style="animation-delay: 0.1s">
+                    <div class="step-number">2</div>
+                    <h3>Receive Instant Quote</h3>
+                    <p>Get a fair market quote based on brand, condition, and expiration.</p>
+                    <div class="step-icon">💰</div>
+                </div>
+                
+                <div class="step-connector"></div>
+                
+                <div class="step-card fade-in" style="animation-delay: 0.2s">
+                    <div class="step-number">3</div>
+                    <h3>Ship Free</h3>
+                    <p>We provide prepaid shipping labels. No cost to you.</p>
+                    <div class="step-icon">📦</div>
+                </div>
+                
+                <div class="step-connector"></div>
+                
+                <div class="step-card fade-in" style="animation-delay: 0.3s">
+                    <div class="step-number">4</div>
+                    <h3>Get Paid Fast</h3>
+                    <p>Payment sent within 24 hours of inspection. Direct deposit or check.</p>
+                    <div class="step-icon">✓</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Table -->
+    <section class="pricing" id="pricing">
+        <div class="section-container">
+            <h2>Popular Supplies We Buy</h2>
+            <p class="section-subtitle">See typical payouts for commonly resold items</p>
+            
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="pricing-badge">Most Popular</div>
+                    <h3>Dexcom G6/G7</h3>
+                    <p class="pricing-desc">Continuous Glucose Monitor</p>
+                    <div class="pricing-value">$150-$300</div>
+                    <p class="pricing-condition">Per unused transmitter + sensors</p>
+                    <ul class="pricing-features">
+                        <li>✓ Unopened boxes preferred</li>
+                        <li>✓ Any expiration date</li>
+                        <li>✓ Bulk orders welcome</li>
+                    </ul>
+                </div>
+                
+                <div class="pricing-card featured">
+                    <div class="pricing-badge featured">Best Rates</div>
+                    <h3>FreeStyle Libre</h3>
+                    <p class="pricing-desc">Flash Glucose Monitoring</p>
+                    <div class="pricing-value featured">$80-$200</div>
+                    <p class="pricing-condition">Per reader + sensors</p>
+                    <ul class="pricing-features">
+                        <li>✓ Reader + sensors</li>
+                        <li>✓ Sealed packages</li>
+                        <li>✓ Quick processing</li>
+                    </ul>
+                    <button class="btn btn-primary" data-modal="quote-modal">Get My Quote</button>
+                </div>
+                
+                <div class="pricing-card">
+                    <div class="pricing-badge">Premium Rates</div>
+                    <h3>Medtronic Guardian</h3>
+                    <p class="pricing-desc">Continuous Monitoring System</p>
+                    <div class="pricing-value">$200-$400</div>
+                    <p class="pricing-condition">Per sensor + transmitter</p>
+                    <ul class="pricing-features">
+                        <li>✓ Premium pricing</li>
+                        <li>✓ All conditions accepted</li>
+                        <li>✓ High demand item</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="pricing-note">
+                <p><strong>Don't see your supplies?</strong> We buy insulin pens, test strips, lancets, pump supplies, and more. <button class="link-btn" data-modal="quote-modal">Get a custom quote</button></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="why-us" id="why-us">
+        <div class="section-container">
+            <h2>Why Choose GlucoDollars?</h2>
+            <p class="section-subtitle">The trusted platform for selling medical supplies</p>
+            
+            <div class="benefits-grid">
+                <div class="benefit-card fade-in">
+                    <div class="benefit-icon">💵</div>
+                    <h3>Best Payouts</h3>
+                    <p>We pay top dollar. Our average payout is 60-80% of retail value.</p>
+                </div>
+                
+                <div class="benefit-card fade-in" style="animation-delay: 0.1s">
+                    <div class="benefit-icon">⚡</div>
+                    <h3>Fast Turnaround</h3>
+                    <p>Quote in minutes. Payment within 24 hours. No waiting around.</p>
+                </div>
+                
+                <div class="benefit-card fade-in" style="animation-delay: 0.2s">
+                    <div class="benefit-icon">🛡️</div>
+                    <h3>Trusted & Licensed</h3>
+                    <p>Fully licensed medical reseller. FDA compliant. Your supplies handled professionally.</p>
+                </div>
+                
+                <div class="benefit-card fade-in" style="animation-delay: 0.3s">
+                    <div class="benefit-icon">✓</div>
+                    <h3>Simple Process</h3>
+                    <p>No complicated forms. No hidden fees. Transparent pricing from start to finish.</p>
+                </div>
+                
+                <div class="benefit-card fade-in" style="animation-delay: 0.4s">
+                    <div class="benefit-icon">🌍</div>
+                    <h3>Nationwide Service</h3>
+                    <p>Serving all 50 states. Prepaid shipping labels included. Hassle-free delivery.</p>
+                </div>
+                
+                <div class="benefit-card fade-in" style="animation-delay: 0.5s">
+                    <div class="benefit-icon">🔒</div>
+                    <h3>Privacy Protected</h3>
+                    <p>Your information is secure. HIPAA-compliant processes. Confidential transactions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq" id="faq">
+        <div class="section-container">
+            <h2>Frequently Asked Questions</h2>
+            <p class="section-subtitle">Everything you need to know about selling with GlucoDollars</p>
+            
+            <div class="faq-grid">
+                <div class="faq-item fade-in">
+                    <button class="faq-question">
+                        <span>What supplies do you buy?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>We buy a wide range of diabetic supplies including: Dexcom, FreeStyle Libre, Medtronic, insulin pens, test strips, lancets, pump supplies, and more. If you're not sure, just submit a quote request and we'll let you know!</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item fade-in" style="animation-delay: 0.1s">
+                    <button class="faq-question">
+                        <span>How are prices determined?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>We base our quotes on brand, model, condition, remaining battery/sensor life, and expiration dates. Unused, sealed boxes typically receive our highest payouts. We inspect all items and adjust final payment if condition differs from submission.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item fade-in" style="animation-delay: 0.2s">
+                    <button class="faq-question">
+                        <span>Is my information safe and private?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes. We follow HIPAA compliance standards and use SSL encryption for all transactions. Your personal and medical information is never shared with third parties. We treat your privacy as a top priority.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item fade-in" style="animation-delay: 0.3s">
+                    <button class="faq-question">
+                        <span>How much does shipping cost?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Shipping is completely free. We provide prepaid, insured shipping labels via email after you accept a quote. Just pack your supplies and drop them off at any carrier location.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item fade-in" style="animation-delay: 0.4s">
+                    <button class="faq-question">
+                        <span>How fast do I get paid?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>We process payments within 24 hours of receiving and inspecting your supplies. You can choose direct deposit (fastest) or check payment. Most sellers receive payment 2-3 days after shipment arrival.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item fade-in" style="animation-delay: 0.5s">
+                    <button class="faq-question">
+                        <span>What if my supplies have expired?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>We accept expired supplies! The payout may be lower than unexpired items, but there's still value. Submit a quote with the expiration dates and we'll give you an accurate offer. Many healthcare providers still purchase expired supplies.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact / Quote Section -->
+    <section class="contact" id="contact">
+        <div class="section-container">
+            <h2>Ready to Sell Your Supplies?</h2>
+            <p class="section-subtitle">Get your personalized quote in just 2 minutes</p>
+            
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="info-item">
+                        <h4>📞 Call Us</h4>
+                        <p>1-800-GLUCOSE-1</p>
+                        <p class="small-text">Mon-Fri 9am-6pm EST</p>
+                    </div>
+                    
+                    <div class="info-item">
+                        <h4>📧 Email</h4>
+                        <p>hello@glucodollars.com</p>
+                        <p class="small-text">Response within 2 hours</p>
+                    </div>
+                    
+                    <div class="info-item">
+                        <h4>⏰ Quick Quote</h4>
+                        <p>2 minute online form</p>
+                        <p class="small-text">Instant price estimate</p>
+                    </div>
+                </div>
+                
+                <form class="quote-form" id="contact-form">
+                    <div class="form-group">
+                        <label for="fullname">Full Name</label>
+                        <input type="text" id="fullname" name="fullname" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="supplies">What supplies do you have?</label>
+                        <select id="supplies" name="supplies" required>
+                            <option value="">-- Select --</option>
+                            <option value="dexcom">Dexcom G6/G7</option>
+                            <option value="freestyle">FreeStyle Libre</option>
+                            <option value="medtronic">Medtronic Guardian</option>
+                            <option value="insulin">Insulin Pens/Vials</option>
+                            <option value="teststrips">Test Strips</option>
+                            <option value="pump">Pump Supplies</option>
+                            <option value="other">Other/Multiple</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="quantity">Approximate Quantity</label>
+                        <input type="text" id="quantity" name="quantity" placeholder="e.g., 5 boxes, 2 pens" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="condition">Condition</label>
+                        <select id="condition" name="condition" required>
+                            <option value="">-- Select --</option>
+                            <option value="unopened">Unopened/Sealed</option>
+                            <option value="opened">Opened but Unused</option>
+                            <option value="partial">Partially Used</option>
+                        </select>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">Get My Quote</button>
+                    <p class="form-note">✓ No commitment. We'll follow up with a personalized quote within 2 hours.</p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>GlucoDollars</h4>
+                <p>The trusted platform for selling unused diabetic medical supplies.</p>
+                <div class="social-links">
+                    <a href="#">Facebook</a>
+                    <a href="#">Twitter</a>
+                    <a href="#">Instagram</a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#how-it-works">How It Works</a></li>
+                    <li><a href="#pricing">Pricing</a></li>
+                    <li><a href="#why-us">Why Us</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">HIPAA Notice</a></li>
+                    <li><a href="#">Licensing</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="#contact">Contact Us</a></li>
+                    <li><a href="#">Track Shipment</a></li>
+                    <li><a href="#">Check Status</a></li>
+                    <li><a href="#">Resources</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2026 GlucoDollars. All rights reserved. Licensed Medical Reseller.</p>
+        </div>
+    </footer>
+
+    <!-- Quote Modal -->
+    <div class="modal" id="quote-modal">
+        <div class="modal-content">
+            <button class="modal-close">×</button>
+            <h2>Get Your Quote</h2>
+            <form id="quote-form" class="quote-form">
+                <div class="form-group">
+                    <label for="modal-name">Full Name</label>
+                    <input type="text" id="modal-name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="modal-email">Email Address</label>
+                    <input type="email" id="modal-email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="modal-phone">Phone Number</label>
+                    <input type="tel" id="modal-phone" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="modal-supplies">What supplies do you have?</label>
+                    <select id="modal-supplies" required>
+                        <option value="">-- Select --</option>
+                        <option value="dexcom">Dexcom G6/G7</option>
+                        <option value="freestyle">FreeStyle Libre</option>
+                        <option value="medtronic">Medtronic Guardian</option>
+                        <option value="insulin">Insulin Pens/Vials</option>
+                        <option value="teststrips">Test Strips</option>
+                        <option value="pump">Pump Supplies</option>
+                        <option value="other">Other/Multiple</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="modal-quantity">Approximate Quantity</label>
+                    <input type="text" id="modal-quantity" placeholder="e.g., 5 boxes, 2 pens" required>
+                </div>
+                
+                <button type="submit" class="btn btn-primary" style="width: 100%;">Get My Quote</button>
+                <p class="form-note">✓ No commitment. Instant quote, personalized for your supplies.</p>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
