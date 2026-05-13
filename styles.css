@@ -354,3 +354,125 @@ h2 {
         text-align: center;
     }
 }
+/* ===============================
+   PREMIUM UI UPGRADE PATCH
+   (SAFE ADD-ON — DOES NOT BREAK STRUCTURE)
+================================ */
+
+/* Slightly richer background depth */
+body {
+    background: #ffffff;
+}
+
+/* Improve section breathing room */
+section {
+    position: relative;
+}
+
+/* Headings feel more premium */
+h1 {
+    letter-spacing: -0.5px;
+}
+
+h2 {
+    letter-spacing: -0.3px;
+}
+
+/* HERO upgrade (without changing layout) */
+.hero {
+    background: radial-gradient(circle at top, rgba(101, 214, 164, 0.12), transparent 55%),
+                radial-gradient(circle at bottom right, rgba(15, 123, 115, 0.10), transparent 60%),
+                var(--bg);
+}
+
+/* Make hero content feel more "startup premium" */
+.hero-subheading {
+    max-width: 520px;
+}
+
+/* CTA buttons feel more expensive */
+.btn-primary,
+.cta-button {
+    box-shadow: 0 8px 20px rgba(15, 123, 115, 0.18);
+}
+
+.btn-primary:hover,
+.cta-button:hover {
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 12px 30px rgba(15, 123, 115, 0.25);
+}
+
+/* Cards feel less flat */
+.step-card,
+.pricing-card,
+.benefit-card,
+.faq-item,
+.info-item {
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    transition: all 0.25s ease;
+}
+
+/* Hover depth (subtle, not flashy) */
+.step-card:hover,
+.pricing-card:hover,
+.benefit-card:hover,
+.faq-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 18px 40px rgba(0,0,0,0.08);
+}
+
+/* Featured pricing card pop */
+.pricing-card.featured {
+    transform: scale(1.03);
+    box-shadow: 0 18px 45px rgba(15, 123, 115, 0.18);
+}
+
+/* Trust strip upgrade */
+.trust-strip {
+    background: linear-gradient(135deg, var(--primary), #0a5a52);
+}
+
+/* Better spacing for stats */
+.hero-stats {
+    margin-top: 1rem;
+}
+
+.stat {
+    padding: 0.5rem 0;
+}
+
+/* FAQ polish */
+.faq-question {
+    font-weight: 600;
+}
+
+.faq-item {
+    overflow: hidden;
+}
+
+/* Contact form upgrade */
+.quote-form {
+    box-shadow: 0 15px 35px rgba(0,0,0,0.06);
+}
+
+/* Input polish */
+.form-group input,
+.form-group select {
+    background: #fff;
+}
+
+/* Footer polish */
+.footer {
+    background: linear-gradient(135deg, var(--primary), #0a5a52);
+}
+
+/* Mobile polish */
+@media (max-width: 768px) {
+    .pricing-card.featured {
+        transform: none;
+    }
+
+    .hero {
+        padding: 3rem 1.5rem;
+    }
+}
