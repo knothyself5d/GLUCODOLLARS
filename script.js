@@ -8,40 +8,43 @@ if (mobileMenuBtn) {
     });
 }
 
-// Modal functionality
-const modals = document.querySelectorAll('.modal');
-const ctaBtns = document.querySelectorAll('[data-modal]');
-const closeButtons = document.querySelectorAll('.modal-close');
+// Smooth scroll to contact form for CTA buttons
+function smoothScrollToContact() {
+    const contactSection = document.getElementById('contact');
+    if (contactSection) {
+        contactSection.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        });
+    }
+}
 
-ctaBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-        const modalId = btn.getAttribute('data-modal');
-        const modal = document.getElementById(modalId);
-        if (modal) {
-            modal.classList.add('active');
-            document.body.style.overflow = 'hidden';
-        }
-    });
-});
+// Hero CTA button - Smooth scroll to contact form
+const heroSellBtn = document.getElementById('hero-sell-btn');
+if (heroSellBtn) {
+    heroSellBtn.addEventListener('click', smoothScrollToContact);
+}
 
-closeButtons.forEach(btn => {
-    btn.addEventListener('click', (e) => {
-        const modal = e.target.closest('.modal');
-        if (modal) {
-            modal.classList.remove('active');
-            document.body.style.overflow = 'auto';
-        }
-    });
-});
+// Nav CTA button - Smooth scroll to contact form
+const navSellBtn = document.getElementById('nav-sell-btn');
+if (navSellBtn) {
+    navSellBtn.addEventListener('click', smoothScrollToContact);
+}
 
-modals.forEach(modal => {
-    modal.addEventListener('click', (e) => {
-        if (e.target === modal) {
-            modal.classList.remove('active');
-            document.body.style.overflow = 'auto';
-        }
+// Pricing card CTA button - Smooth scroll to contact form
+const pricingSellBtn = document.getElementById('pricing-sell-btn');
+if (pricingSellBtn) {
+    pricingSellBtn.addEventListener('click', smoothScrollToContact);
+}
+
+// Custom quote button - Smooth scroll to contact form
+const customQuoteBtn = document.getElementById('custom-quote-btn');
+if (customQuoteBtn) {
+    customQuoteBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        smoothScrollToContact();
     });
-});
+}
 
 // FAQ Accordion
 const faqQuestions = document.querySelectorAll('.faq-question');
@@ -73,7 +76,6 @@ faqQuestions.forEach(question => {
 
 // Form submissions
 const contactForm = document.getElementById('contact-form');
-const quoteForm = document.getElementById('quote-form');
 
 function handleFormSubmit(e) {
     e.preventDefault();
@@ -81,11 +83,11 @@ function handleFormSubmit(e) {
     // Get form data
     const formData = new FormData(e.target);
     const data = {
-        fullname: formData.get('fullname') || formData.get('modal-name'),
-        email: formData.get('email') || formData.get('modal-email'),
-        phone: formData.get('phone') || formData.get('modal-phone'),
-        supplies: formData.get('supplies') || formData.get('modal-supplies'),
-        quantity: formData.get('quantity') || formData.get('modal-quantity'),
+        fullname: formData.get('fullname'),
+        email: formData.get('email'),
+        phone: formData.get('phone'),
+        supplies: formData.get('supplies'),
+        quantity: formData.get('quantity'),
         condition: formData.get('condition')
     };
     
@@ -102,22 +104,11 @@ function handleFormSubmit(e) {
         submitBtn.textContent = originalText;
         submitBtn.style.background = '';
         e.target.reset();
-        
-        // Close modal if open
-        const modal = e.target.closest('.modal');
-        if (modal) {
-            modal.classList.remove('active');
-            document.body.style.overflow = 'auto';
-        }
     }, 2000);
 }
 
 if (contactForm) {
     contactForm.addEventListener('submit', handleFormSubmit);
-}
-
-if (quoteForm) {
-    quoteForm.addEventListener('submit', handleFormSubmit);
 }
 
 // Scroll animation observer
@@ -153,7 +144,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             });
             
             // Close mobile menu if open
-            if (navbarMenu.style.display === 'flex') {
+            if (navbarMenu && navbarMenu.style.display === 'flex') {
                 navbarMenu.style.display = 'none';
             }
         }
